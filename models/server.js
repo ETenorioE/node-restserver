@@ -30,12 +30,13 @@ class Server{
 
     routes(){
         //Ruta del API de Usuarios
+        //this.usuariosPath= '/api/usuarios'
         this.app.use(this.usuariosPath,require('../routes/usuarios'))
 
 
     }
 
-
+        //this.port= process.env.PORT;
     listen(){
         this.app.listen(this.port, ()=>{
             console.log('Servidor en marcha - Puerto :', this.port);
